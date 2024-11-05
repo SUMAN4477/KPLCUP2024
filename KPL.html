@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <style>
+        body {
+            background-image: url('P.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: rgb(0, 255, 0);
+            margin-top: 5px;
+            text-shadow: 2px 2px 4px black; /* Black shadow for scoreboard title */
+        }
+        .k h2 {
+            font-size: 80px;
+            text-align: center;
+            color: white;
+            margin: -20px 0 0 0;
+            text-shadow: 2px 2px 6px black; /* Black shadow for cup title */
+        }
+        .team h2 {
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px black; /* Shadow for team title */
+        }
+        .team input[type="text"] {
+            padding: 10px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .run, .target {
+            font-size: 40px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px black; /* Black shadow for labels */
+        }
+        .run label, .target label {
+            font-size: 50px; /* Increased size */
+            font-weight: bold;
+            text-shadow: 3px 3px 5px black; /* Shadow for run and target labels */
+        }
+        .run input[type="number"],
+        .target input[type="number"] {
+            padding: 15px;
+            border-radius: 10px;
+            width: 80px;
+            font-size: 24px;
+            margin: 5px;
+            text-align: center;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Shadow for input fields */
+        }
+    </style>
+</head>
+<body>
+    <h1>SCOREBOARD</h1>
+    <div class="k">
+        <h2><u>K.P.L CUP 2024</u></h2>
+    </div>
+    <div class="team">
+        <h2>-: Team Name :-</h2>
+        <input type="text" name="name" id="teamName" placeholder="Enter team name">
+    </div>
+    <div class="run">
+        <label for="runs">Run:</label> 
+        <input type="number" id="runs" placeholder="0"> <br>
+        <label for="overs">OVER:</label>
+        <input type="number" id="overs" placeholder="0"> <br>
+        <label for="wickets">WICKET:</label>
+        <input type="number" id="wickets" placeholder="0">
+    </div>
+    <div class="target">
+        <label for="target">Target:</label>
+        <input type="number" id="target" placeholder="0">
+    </div>
+    
+    <script>
+        document.getElementById("teamName").addEventListener("input", function() {
+            console.log("Team Name:", this.value);
+        });
+        document.getElementById("runs").addEventListener("input", function() {
+            console.log("Runs:", this.value);
+        });
+        document.getElementById("overs").addEventListener("input", function() {
+            console.log("Overs:", this.value);
+        });
+        document.getElementById("wickets").addEventListener("input", function() {
+            console.log("Wickets:", this.value);
+        });
+        document.getElementById("target").addEventListener("input", function() {
+            console.log("Target:", this.value);
+        });
+    </script>
+</body>
+</html>
